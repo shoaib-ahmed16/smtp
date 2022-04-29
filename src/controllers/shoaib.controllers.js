@@ -1,5 +1,5 @@
 const path = require('path')
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 
 const transporter = require('../configs/mail')
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
     transporter.sendMail({
       from: shoaib.email,
-      to: 'sahmed094@gmail.com',
+      to: process.env.TOEMAIL,
       subject: shoaib.subject,
       text: `From:${shoaib.name},Email: ${shoaib.email},Text For Me: ${shoaib.text}`,
     })
