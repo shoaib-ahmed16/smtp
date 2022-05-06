@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
     transporter.sendMail({
       from: shoaib.email,
-      to: process.env.TOEMAIL,
+      to: 'sahmed094@gmail.com',
       subject: shoaib.subject,
       text: `From:${shoaib.name},Email: ${shoaib.email},Text For Me: ${shoaib.text}`,
     })
