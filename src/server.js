@@ -1,6 +1,6 @@
 const app = require('./index')
 const connect = require('./configs/db')
-process('dotenv').config()
+require('dotenv').config()
 const port =
   process.env.PORT1 ||
   process.env.PORT2 ||
