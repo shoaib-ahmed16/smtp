@@ -38,9 +38,12 @@ router.post('/', async (req, res) => {
 
     transporter.sendMail({
       from: shoaib.email,
-      to: 'sahmed094@gmail.com',
+      to: `${process.env.TOMAIL}`,
       subject: shoaib.subject,
-      text: `From:${shoaib.name},Email: ${shoaib.email},Text For Me: ${shoaib.text}`,
+      text: `From:${shoaib.name}
+      Contact Details:
+      Email: ${shoaib.email}
+      Message: ${shoaib.text}`,
     })
     return res.status(201).send({ message: 'Email is Recieve By Shoaib Ahmed' })
   } catch (err) {

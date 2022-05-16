@@ -6,6 +6,6 @@ const app = express()
 
 app.use(express.json())
 
-app.use('/shoaib', shoaibController)
+app.use('/emailToShoaib', shoaibController)
 
 module.exports = app
