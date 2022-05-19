@@ -43,6 +43,7 @@ router.post('/', async (req, res) => {
       text: `From:${shoaib.name}
       Contact Details:
       Email: ${shoaib.email}
+      Contact:${shoaib.contact}
       Message: ${shoaib.text}`,
     })
     return res.status(201).send({ message: 'Email is Recieve By Shoaib Ahmed' })
