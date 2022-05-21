@@ -33,6 +33,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
+  console.log(req.body)
   try {
     const shoaib = await Shoaib.create(req.body)
 
@@ -46,7 +47,7 @@ router.post('/', async (req, res) => {
       Contact:${shoaib.contact}
       Message: ${shoaib.text}`,
     })
-    return res.status(201).send({ message: 'Email is Recieve By Shoaib Ahmed' })
+    return res.status(200).send({data: "email sent!"})
   } catch (err) {
     return res.status(500).send({ message: err.message })
   }
